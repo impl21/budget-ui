@@ -1,9 +1,17 @@
+var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var path = require('path');
+
 module.exports = {
-    entry: './src/index.js',
+    entry: {
+        app: [path.join(__dirname, './web/src/index.js')],
+        web: './web/src/index.js'
+    },
 
     output: {
-        filename: 'bundle.js',
-        publicPath: ''
+        path: path.join(__dirname, './dist'),
+        filename: '[name].js',
+        publicPath: '/'
     },
 
     module: {
@@ -17,5 +25,8 @@ module.exports = {
                 }
             }
         ]
-    }
+    },
+    plugins: [
+        new HtmlWebpackPlugin({template: path.resolve(__dirname, './web/index.html'), inject: true})
+    ]
 };
