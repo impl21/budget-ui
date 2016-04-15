@@ -7,7 +7,10 @@ class App extends React.Component {
     render() {
         return (
             <div>Hello from Budget App
-                <ul><li><Link to="/about">About</Link></li></ul>
+                <ul>
+                    <li><Link to="/about">About</Link></li>
+                    <li><Link to="/login">Login</Link></li>
+                </ul>
                 {this.props.children}
             </div>
         )
