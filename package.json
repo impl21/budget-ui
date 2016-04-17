@@ -3,22 +3,23 @@
   "license": "MIT",
   "version": "1.0.0",
   "author": "impl21",
-  "repository": "https://bitbucket.org/impl21/budget-ui",
+  "repository": "https://github.com/impl21/budget-ui",
   "description": "Budget UI",
   "main": "index.js",
   "devDependencies": {
     "axios": "^0.9.1",
     "babel-core": "6.7.2",
     "babel-loader": "6.2.4",
+    "babel-plugin-react-transform": "2.0.0",
     "babel-preset-es2015": "6.6.0",
     "babel-preset-react": "6.5.0",
-    "babel-plugin-react-transform": "2.0.0",
+    "extract-text-webpack-plugin": "1.0.1",
+    "file-loader": "0.8.5",
     "html-webpack-plugin": "2.9.0",
+    "http-server": "0.8.5",
     "less": "2.6.1",
     "less-loader": "2.2.2",
     "lodash": "4.6.1",
-    "http-server": "0.8.5",
-    "install": "0.5.6",
     "npm": "3.8.1",
     "react": "15.0.0",
     "react-addons-test-utils": "15.0.0",
@@ -35,11 +36,12 @@
     "redux-thunk": "2.0.1",
     "uikit": "2.26.1",
     "webpack": "1.12.14",
+    "webpack-dev-middleware": "1.5.1",
     "webpack-config": "4.0.0",
     "webpack-dev-server": "1.14.1"
   },
   "dependencies": {},
   "scripts": {
-    "start": "webpack-dev-server --inline --content-base ."
+    "start": "webpack-dev-server --content-base ."
   }
 }
