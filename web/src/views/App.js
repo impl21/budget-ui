@@ -6,8 +6,8 @@ class App extends React.Component {
 
     render() {
         return (
-            <div>Hello from Budget App
-                <ul>
+            <div className="uk-container uk-container-center">Hello from Budget App
+                <ul className="uk-list uk-list-striped">
                     <li><Link to="/about">About</Link></li>
                     <li><Link to="/login">Login</Link></li>
                 </ul>

@@ -5,12 +5,18 @@ class LoginForm extends React.Component {
         const {fields: {email, password}, handleSubmit} = this.props;
 
         return (
-            <form>
-                <input type="text" {...email}/>
-                <input type="password" {...password}/>
-                <button type="submit" onClick={handleSubmit(this.validate)}>
-                    Login
-                </button>
+            <form className="uk-form">
+                <div className="uk-form-row">
+                    <input type="text" {...email}/>
+                </div>
+                <div className="uk-form-row">
+                    <input type="password" {...password}/>
+                </div>
+                <div className="uk-form-row">
+                    <button className="uk-button-danger" type="submit" onClick={handleSubmit(this.validate)}>
+                        Login
+                    </button>
+                </div>
             </form>
         )
     }
