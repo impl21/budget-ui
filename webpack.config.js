@@ -29,14 +29,18 @@ module.exports = {
             },
             {
                 test: /\.less$/,
+                exclude: [/web/],
                 loader: ExtractTextPlugin.extract("style-loader", 'css-loader?sourceMap!less-loader?sourceMap')
-            }
+            },
+            {
+                test: /\.less$/,
+                include: [/web/],
+                loader: ExtractTextPlugin.extract("style-loader", 'css-loader?sourceMap!less-loader?strictMath&sourceMap')
+            },
+            {test: /\.(ttf|eot|otf|svg|woff(2)?)(\?[\.a-z0-9]+)?$/, loader: "file-loader"}
         ]
     },
-    //resolve: {
-    //    extensions: ['', '.webpack.js', '.web.js', '.js', '.css', '.less'],
-    //
-    //},
+    devtool: 'inline-source-map',
     plugins: [
         new HtmlWebpackPlugin({template: path.resolve(__dirname, './web/index.html'), inject: true}),
         new ExtractTextPlugin("[name].css")
@@ -46,6 +50,8 @@ module.exports = {
         port: 3000,
         inline: true,
         progress: true,
-        colors: true
+        colors: true,
+        open: true,
+        contentBase: "."
     }
 };
