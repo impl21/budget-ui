@@ -29,14 +29,19 @@ module.exports = {
             },
             {
                 test: /\.less$/,
-                exclude: [/web/, /widget/],
                 loader: ExtractTextPlugin.extract("style-loader", 'css-loader?sourceMap!less-loader?sourceMap')
             }
         ]
     },
+    //resolve: {
+    //    extensions: ['', '.webpack.js', '.web.js', '.js', '.css', '.less'],
+    //
+    //},
     plugins: [
-        new HtmlWebpackPlugin({template: path.resolve(__dirname, './web/index.html'), inject: true})
-    ],
+        new HtmlWebpackPlugin({template: path.resolve(__dirname, './web/index.html'), inject: true}),
+        new ExtractTextPlugin("[name].css")
+
+],
     devServer: {
         port: 3000,
         inline: true,

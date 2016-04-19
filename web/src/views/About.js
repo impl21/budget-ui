@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 class About extends React.Component {
     render() {
-        return <div>About site</div>
+        return <div className="header">About site</div>
     }
 }
 
