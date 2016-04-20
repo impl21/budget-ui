@@ -45,7 +45,7 @@ module.exports = {
         new HtmlWebpackPlugin({template: path.resolve(__dirname, './web/index.html'), inject: true}),
         new ExtractTextPlugin("[name].css")
 
-],
+    ],
     devServer: {
         port: 3000,
         inline: true,
