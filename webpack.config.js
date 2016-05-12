@@ -5,6 +5,16 @@ var path = require('path');
 
 module.exports = {
     entry: {
+        uikit: [
+            "./modules/uikit/js/core/core.js",
+            "./modules/uikit/js/core/grid.js",
+            "./modules/uikit/js/core/dropdown.js",
+            "./modules/uikit/js/core/modal.js",
+            "./modules/uikit/js/core/nav.js",
+            "./modules/uikit/js/core/offcanvas.js",
+            "./modules/uikit/js/core/utility.js",
+            "./modules/uikit/js/components/notify.js"
+        ],
         app: './web/src/index.js'
     },
 
@@ -42,6 +52,11 @@ module.exports = {
     },
     devtool: 'inline-source-map',
     plugins: [
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            "window.jQuery": "jquery"
+        }),
         new HtmlWebpackPlugin({template: path.resolve(__dirname, './web/index.html'), inject: true}),
         new ExtractTextPlugin("[name].css")
 
