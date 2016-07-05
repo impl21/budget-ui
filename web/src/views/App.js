@@ -10,6 +10,8 @@ class App extends React.Component {
                 <ul className="uk-list uk-list-striped">
                     <li><Link to="/about">About</Link></li>
                     <li><Link to="/login">Login</Link></li>
+                    <li><Link to="/signup">Sign Up</Link></li>
+                    <li><Link to="/expenses">Expenses</Link></li>
                 </ul>
                 {this.props.children}
             </div>
