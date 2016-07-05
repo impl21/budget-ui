@@ -8,6 +8,5 @@ export const addExpense = (expense) => {
 };
 
 export const removeExpense = (id) => {
-    console.log("Action: removeExpense: ", id);
     return(createAction(REMOVE_EXPENSE, id));
 };
