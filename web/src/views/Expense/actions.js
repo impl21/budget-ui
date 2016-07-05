@@ -1,9 +1,13 @@
-import * as Redux from 'Redux';
-const ADD_EXPENSE = "ADD_EXPENSE";
+import * as Redux from 'redux';
+import { createAction } from '../../utils/utils';
+export const ADD_EXPENSE = "ADD_EXPENSE";
+export const REMOVE_EXPENSE = "REMOVE_EXPENSE";
 
-const addExpense = () => {
-    dispatch()
+export const addExpense = (expense) => {
+    return(createAction(ADD_EXPENSE, [expense]));
 };
-export {
-    ADD_EXPENSE
-}
+
+export const removeExpense = (id) => {
+    console.log("Action: removeExpense: ", id);
+    return(createAction(REMOVE_EXPENSE, id));
+};
