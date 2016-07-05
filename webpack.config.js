@@ -67,6 +67,7 @@ module.exports = {
         progress: true,
         colors: true,
         open: true,
-        contentBase: "."
+        contentBase: ".",
+        historyApiFallback: true
     }
 };
